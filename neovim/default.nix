@@ -15,6 +15,7 @@
   nodePackages,
   lua-language-server,
   yaml-language-server,
+  quint-language-server,
   texlab,
   lib,
 }: 
@@ -161,6 +162,7 @@ let
       lua-language-server
       texlab
       yaml-language-server
+      quint-language-server
       nodePackages.bash-language-server
       nodePackages.typescript-language-server
       nodePackages.vscode-langservers-extracted

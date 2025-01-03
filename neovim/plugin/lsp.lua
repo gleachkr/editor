@@ -43,6 +43,15 @@ require 'lspconfig'.pylsp.setup(generic)
 require 'lspconfig'.rust_analyzer.setup(generic)
 require 'lspconfig'.texlab.setup(generic)
 require 'lspconfig'.ts_ls.setup(generic)
+
+vim.api.nvim_create_autocmd("FileType", {
+    callback = function() vim.lsp.start({
+        name = 'quint',
+        cmd = {'quint-language-server', '--stdio'},
+        root_dir = vim.fs.dirname()
+    }) end,
+    pattern = "quint"
+})
 -- require 'coq-lsp'.setup {
 --     lsp = {
 --         on_attach = on_attach,

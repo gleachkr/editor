@@ -48,6 +48,12 @@ vim.cmd.dig("O7", 9318)
 vim.cmd.dig("O8", 9319)
 vim.cmd.dig("O9", 9320)
 
+vim.filetype.add({
+    extension = {
+        qnt = 'quint'
+    }
+})
+
 local termAutocommands = vim.api.nvim_create_augroup("TERM", { clear = true })
 vim.api.nvim_create_autocmd("TermOpen",
     { pattern = '*', group = termAutocommands, callback = function() vim.opt_local.nu = false end })
