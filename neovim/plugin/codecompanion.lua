@@ -25,11 +25,20 @@ local function setup_adapter(api_key, adapter)
 end
 
 local continue_with_adapter = function(callback, adapter)
+
     if not password_cache[adapter] then
-        vim.ui.input({ prompt = "Enter " .. adapter .. " API key: " }, function(input)
-            password_cache[adapter] = input
+        -- Try getting the API key from environment
+        local env_var_name = adapter:upper() .. "_API_KEY"
+        local api_key = os.getenv(env_var_name)
+        if api_key then
+            password_cache[adapter] = api_key
             callback(setup_adapter(password_cache[adapter], adapter))
-        end)
+        else
+            vim.ui.input({ prompt = "Enter " .. adapter .. " API key: " }, function(input)
+                password_cache[adapter] = input
+                callback(setup_adapter(password_cache[adapter], adapter))
+            end)
+        end
     else
         callback(setup_adapter(password_cache[adapter], adapter))
     end
