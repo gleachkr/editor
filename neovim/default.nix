@@ -136,7 +136,7 @@ let
       vim-loves-dafny
       fidget-nvim
       nvim-lightbulb
-      neodev-nvim
+      lazydev-nvim
       # coq-lsp-nvim
       friendly-snippets
       vim-obsession
