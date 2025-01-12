@@ -148,6 +148,7 @@ let
       telescope-nvim
       telescope-fzf-native-nvim
       telescope-ui-select-nvim
+      molten-nvim
     ];
 
     plugins = nixpkgsPlugins ++ [
@@ -175,6 +176,15 @@ let
       inherit plugins;
       withPython3 = true;
       withNodeJs = true;
+      extraPython3Packages = pyPkgs: with pyPkgs; [
+        pynvim
+        jupyter-client
+        cairosvg
+        pnglatex
+        plotly
+        pyperclip
+        ipykernel
+      ];
     };
 
     neovim = wrapNeovimUnstable neovim-unwrapped (neovimConfig // { 
