@@ -43,10 +43,14 @@
         in
         {
 
-          packages.default = pkgs.callPackage ./neovim { 
-            inherit (inputs) codecompanion  vim-pandoc; 
+          packages.default = pkgs.callPackage ./neovim {
+            inherit (inputs) codecompanion  vim-pandoc;
             ihaskell = ihaskell910Kernel;
-            quint-language-server = quint-lsp; 
+            quint-language-server = quint-lsp;
+          };
+
+          packages.lite = pkgs.callPackage ./neovim {
+            inherit (inputs) codecompanion  vim-pandoc;
           };
 
         };

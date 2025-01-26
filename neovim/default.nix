@@ -15,8 +15,8 @@
   nodePackages,
   lua-language-server,
   yaml-language-server,
-  quint-language-server,
-  ihaskell,
+  quint-language-server ? null,
+  ihaskell ? null,
   texlab,
   lib,
 }: 
@@ -199,7 +199,7 @@ let
       wrapperArgs = lib.escapeShellArgs neovimConfig.wrapperArgs 
       + " --set NVIM_APPNAME nvim-nix"
       + " --prefix PATH : '${lib.makeBinPath externalPackages}'"
-      + " --prefix JUPYTER_PATH : '${ihaskell}'";
+      + (if ihaskell == null then "" else " --prefix JUPYTER_PATH : '${ihaskell}'");
     });
 
     neovimSession = writeShellApplication {
