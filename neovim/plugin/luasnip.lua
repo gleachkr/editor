@@ -1,6 +1,8 @@
 local types = require("luasnip.util.types")
 
-require 'luasnip'.config.setup({
+local luasnip = require 'luasnip'
+
+luasnip.config.setup({
     store_selection_keys = '<c-s>',
     history = true,
     update_events = { "TextChanged", "TextChangedI" },
@@ -20,5 +22,13 @@ require 'luasnip'.config.setup({
         }
     },
 })
+
+vim.keymap.set('i','<C-j>', function()
+    if luasnip.jumpable(1) then luasnip.jump(1) end
+end)
+
+vim.keymap.set('i','<S-C-j>', function()
+    if luasnip.jumpable(-1) then luasnip.jump(-1) end
+end)
 
 require 'luasnip.loaders.from_vscode'.lazy_load()

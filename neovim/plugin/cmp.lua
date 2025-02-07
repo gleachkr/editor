@@ -31,8 +31,6 @@ cmp.setup({
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
-            elseif luasnip.jumpable(1) then
-                luasnip.jump(1)
             elseif has_words_before() then
                 cmp.complete()
             else
@@ -42,8 +40,6 @@ cmp.setup({
         ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
-            elseif luasnip.jumpable(-1) then
-                luasnip.jump(-1)
             else
                 fallback()
             end
@@ -80,11 +76,12 @@ cmp.setup.filetype({ "lean" }, {
 
 cmp.setup.filetype({ "mail", "pandoc", "markdown", "text" }, {
     sources = cmp.config.sources({
+        { name = 'latex_symbols', option = { cache = true }, },
         { name = 'luasnip' },
+    }, {
         { name = 'path' },
         { name = 'buffer' },
         { name = 'spell', option = { keep_all_entries = true }},
-        { name = 'latex_symbols', option = { cache = true }, },
     })
 })
 
