@@ -22,6 +22,10 @@ vim.opt.showbreak = "↳ "
 vim.opt.expandtab = true
 vim.opt.ts = 4
 vim.opt.sw = 4
+vim.opt.fillchars = {
+    vert = "▕",
+    diff = "╱",
+}
 
 vim.cmd("colo seoul256")
 
