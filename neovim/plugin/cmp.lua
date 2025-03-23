@@ -74,7 +74,7 @@ cmp.setup.filetype({ "lean" }, {
     })
 })
 
-cmp.setup.filetype({ "mail", "pandoc", "markdown", "text" }, {
+cmp.setup.filetype({ "mail", "pandoc", "markdown", "text", "lectic" }, {
     sources = cmp.config.sources({
         { name = 'latex_symbols', option = { cache = true }, },
         { name = 'luasnip' },
@@ -101,4 +101,4 @@ cmp.setup.cmdline('/', {
 })
 
 --needs a separate call
-require("cmp_git").setup()
+require("cmp_git").setup({})
