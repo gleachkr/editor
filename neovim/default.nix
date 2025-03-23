@@ -144,7 +144,6 @@ let
       vim-obsession
       octo-nvim
       oil-nvim
-      vim-pandoc-syntax
       quarto-nvim
       otter-nvim
       telescope-nvim
