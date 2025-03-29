@@ -74,7 +74,7 @@ cmp.setup.filetype({ "lean" }, {
     })
 })
 
-cmp.setup.filetype({ "mail", "pandoc", "markdown", "text", "lectic" }, {
+cmp.setup.filetype({ "mail", "markdown", "text", "lectic" }, {
     sources = cmp.config.sources({
         { name = 'latex_symbols', option = { cache = true }, },
         { name = 'luasnip' },
