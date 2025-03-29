@@ -8,7 +8,6 @@
   vimUtils, 
   vimPlugins, 
   codecompanion,
-  vim-pandoc, 
   ripgrep,
   gh,
   nil,
@@ -63,16 +62,6 @@ let
           vimPlugins.telescope-nvim
         ];
       };
-
-    vim-pandoc-plugin = {
-      plugin = vimUtils.buildVimPlugin {
-        pname = "vim-pandoc";
-        version = "v2";
-        src = vim-pandoc;
-      };
-      config = null;
-      optional = true;
-    };
 
     nixpkgsPlugins = with vimPlugins; [
       nvim-treesitter.withAllGrammars
@@ -154,7 +143,6 @@ let
     ];
 
     plugins = nixpkgsPlugins ++ [
-      vim-pandoc-plugin
       codecompanion-plugin
     ];
 

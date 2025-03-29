@@ -36,11 +36,11 @@
     "codecompanion": {
       "flake": false,
       "locked": {
-        "lastModified": 1742737025,
-        "narHash": "sha256-8m1vt5TnMRGgxPUX1/yLVR81/3Xo5FQFyK9L0yWr30Q=",
+        "lastModified": 1743099443,
+        "narHash": "sha256-WsgiG+qHUuRsaIk7VHyTsJq+l42sNdCVE7L2XNzacic=",
         "owner": "olimorris",
         "repo": "codecompanion.nvim",
-        "rev": "57bc5689a64a15b12251a8cd3c28dddd0d52c0cc",
+        "rev": "51fe5a782dbbd5cad8189420cb8d38fd7c245684",
         "type": "github"
       },
       "original": {
@@ -288,11 +288,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1742750799,
-        "narHash": "sha256-1zwXhh5gC9Tk/vdhIq4T4pVm17sMDN0O4glzQ5nejdw=",
+        "lastModified": 1743286005,
+        "narHash": "sha256-U6VvjwzV3E+qhVqOR74R0p4Hca19WnxALUy278X7KIs=",
         "owner": "gleachkr",
         "repo": "lectic",
-        "rev": "ad5ea906f760e12a76d957c928b745ee7c21e40f",
+        "rev": "41e8e8589441d19c0dbeab3741961575e4e7a761",
         "type": "github"
       },
       "original": {
@@ -350,11 +350,11 @@
         "sbt-derivation": "sbt-derivation"
       },
       "locked": {
-        "lastModified": 1738713195,
-        "narHash": "sha256-tkr3tIwvAWoQJ2Y35unOoF1MWi89X+fBF88XE+fPY9Q=",
+        "lastModified": 1743006070,
+        "narHash": "sha256-fFPZJMDx59jk5OFMfXNiBhGdmpvl71Rh2foGtzQ+lBQ=",
         "owner": "gleachkr",
         "repo": "nix-tools",
-        "rev": "70b59f23af43ebd75fd7e0716795ca8787404d79",
+        "rev": "e027802015000a40db2df7a6db4075d5fab8d02b",
         "type": "github"
       },
       "original": {
@@ -491,11 +491,11 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1742422364,
-        "narHash": "sha256-mNqIplmEohk5jRkqYqG19GA8MbQ/D4gQSK0Mu4LvfRQ=",
+        "lastModified": 1743095683,
+        "narHash": "sha256-gWd4urRoLRe8GLVC/3rYRae1h+xfQzt09xOfb0PaHSk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "a84ebe20c6bc2ecbcfb000a50776219f48d134cc",
+        "rev": "5e5402ecbcb27af32284d4a62553c019a3a49ea6",
         "type": "github"
       },
       "original": {
@@ -512,8 +512,7 @@
         "ihaskell": "ihaskell",
         "lectic": "lectic",
         "nix-tools": "nix-tools",
-        "nixpkgs": "nixpkgs_7",
-        "vim-pandoc": "vim-pandoc"
+        "nixpkgs": "nixpkgs_7"
       }
     },
     "rust-overlay": {
@@ -659,22 +658,6 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "vim-pandoc": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1721679064,
-        "narHash": "sha256-Pb5yyqZNA1RfsvXYZgiM3sCRPr7u+Klc6rgVLKx+QCo=",
-        "owner": "vim-pandoc",
-        "repo": "vim-pandoc",
-        "rev": "bd11902651edc18076f90ed291581d785be52311",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vim-pandoc",
-        "repo": "vim-pandoc",
         "type": "github"
       }
     }

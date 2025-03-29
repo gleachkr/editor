@@ -9,10 +9,6 @@
       url = "github:olimorris/codecompanion.nvim";
       flake = false;
     };
-    vim-pandoc = {
-      url = "github:vim-pandoc/vim-pandoc";
-      flake = false;
-    };
   };
 
   outputs = inputs@{ self, nixpkgs, nix-tools, flake-utils, ihaskell, lectic, ... }:
@@ -46,14 +42,14 @@
         {
 
           packages.default = pkgs.callPackage ./neovim {
-            inherit (inputs) codecompanion  vim-pandoc;
+            inherit (inputs) codecompanion;
             inherit lectic-nvim;
             ihaskell = ihaskell910Kernel;
             quint-language-server = quint-lsp;
           };
 
           packages.lite = pkgs.callPackage ./neovim {
-            inherit (inputs) codecompanion  vim-pandoc;
+            inherit (inputs) codecompanion;
             inherit lectic-nvim;
           };
 
