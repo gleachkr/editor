@@ -17,6 +17,7 @@
   quint-language-server ? null,
   ihaskell ? null,
   lectic-nvim,
+  razzle-nvim,
   texlab,
   lib,
 }: 
@@ -139,6 +140,7 @@ let
       telescope-fzf-native-nvim
       telescope-ui-select-nvim
       lectic-nvim
+      razzle-nvim
       molten-nvim
     ];
 

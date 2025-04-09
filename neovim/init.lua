@@ -68,7 +68,8 @@ vim.api.nvim_create_autocmd("BufWriteCmd", {
     group = noteAutocommands,
     callback = function()
         local name = vim.fn.fnameescape(vim.fn.getline(1))
-        vim.cmd.file(name .. ".txt")
+        name = name:gsub(" ", "_")
+        vim.cmd.file(name .. ".md")
         vim.cmd.write()
     end
 })
