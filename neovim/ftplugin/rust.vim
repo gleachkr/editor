@@ -1,1 +1,2 @@
 ColorScheme Revolution
+compiler cargo
