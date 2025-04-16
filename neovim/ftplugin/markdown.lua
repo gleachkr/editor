@@ -9,4 +9,4 @@ vim.opt_local.formatlistpat = [[^\s*\([-*+∙∘•]\|\d\+\.\)\s\+]]
 vim.opt_local.spell=true
 vim.opt_local.so=10
 vim.opt_local.lsp=5
-vim.cmd[[compiler pandoc]]
+vim.cmd[[silent compiler pandoc]]
