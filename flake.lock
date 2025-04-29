@@ -288,11 +288,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1744853439,
-        "narHash": "sha256-h/C8mG3jIf/DQPjqttU7YIB/ZzPjxAmPQ0KDVexBUz4=",
+        "lastModified": 1745886869,
+        "narHash": "sha256-fQ/FQtZh8VK6zq6hOOzR9l4aCw8JhDf53ZWgY568Zpk=",
         "owner": "gleachkr",
         "repo": "lectic",
-        "rev": "680d6f07ac781882b7585227dbd3b0aafab58c45",
+        "rev": "629a2320adcb6b1e975fb010ca627c10defa5195",
         "type": "github"
       },
       "original": {
@@ -429,11 +429,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1739138025,
-        "narHash": "sha256-M4ilIfGxzbBZuURokv24aqJTbdjPA9K+DtKUzrJaES4=",
+        "lastModified": 1744536153,
+        "narHash": "sha256-awS2zRgF4uTwrOKwwiJcByDzDOdo3Q1rPZbiHQg/N38=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "b2243f41e860ac85c0b446eadc6930359b294e79",
+        "rev": "18dd725c29603f582cf1900e0d25f9f1063dbf11",
         "type": "github"
       },
       "original": {
