@@ -288,11 +288,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1745886869,
-        "narHash": "sha256-fQ/FQtZh8VK6zq6hOOzR9l4aCw8JhDf53ZWgY568Zpk=",
+        "lastModified": 1746995172,
+        "narHash": "sha256-7bgXjqLBEqJauBMr7dD46emnPr3g/P+TKmwdeQcRTP4=",
         "owner": "gleachkr",
         "repo": "lectic",
-        "rev": "629a2320adcb6b1e975fb010ca627c10defa5195",
+        "rev": "bfdac0be5e0ba35954f37324dda85c8e776fb979",
         "type": "github"
       },
       "original": {
