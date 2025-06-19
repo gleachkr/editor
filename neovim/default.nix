@@ -56,6 +56,8 @@ let
           "codecompanion.actions.init"
           "codecompanion.actions.static"
           "codecompanion.providers.actions.mini_pick"
+          "codecompanion.providers.actions.snacks"
+          "codecompanion.providers.actions.fzf_lua"
           "minimal"
         ];
         dependencies = [ 
