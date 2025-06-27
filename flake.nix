@@ -43,7 +43,9 @@
         in
         {
 
-          packages.default = pkgs.callPackage ./neovim {
+          packages.default = self.packages.${system}.lite;
+
+          packages.heavy = pkgs.callPackage ./neovim {
             inherit (inputs) codecompanion;
             inherit lectic-nvim razzle-nvim;
             ihaskell = ihaskell910Kernel;
