@@ -7,7 +7,6 @@
   neovimUtils, 
   vimUtils, 
   vimPlugins, 
-  codecompanion,
   ripgrep,
   gh,
   nil,
@@ -46,25 +45,6 @@ let
         fi
       '';
     };
-
-    codecompanion-plugin = (vimUtils.buildVimPlugin {
-        pname = "vim-codecompanion";
-        version = "v5.2.0";
-        src = codecompanion;
-      }).overrideAttrs {
-        nvimSkipModule = [
-          "codecompanion.actions.init"
-          "codecompanion.actions.static"
-          "codecompanion.providers.actions.mini_pick"
-          "codecompanion.providers.actions.snacks"
-          "codecompanion.providers.actions.fzf_lua"
-          "minimal"
-        ];
-        dependencies = [ 
-          vimPlugins.plenary-nvim 
-          vimPlugins.telescope-nvim
-        ];
-      };
 
     nixpkgsPlugins = with vimPlugins; [
       nvim-treesitter.withAllGrammars
@@ -146,9 +126,7 @@ let
       molten-nvim
     ];
 
-    plugins = nixpkgsPlugins ++ [
-      codecompanion-plugin
-    ];
+    plugins = nixpkgsPlugins ++ [ ];
 
     externalPackages = [
       ripgrep

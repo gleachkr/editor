@@ -6,10 +6,6 @@
     razzle.url = "github:gleachkr/razzle.nvim";
     ihaskell.url = "github:IHaskell/IHaskell";
     lectic.url = "github:gleachkr/lectic";
-    codecompanion = {
-      url = "github:olimorris/codecompanion.nvim";
-      flake = false;
-    };
   };
 
   outputs = inputs@{ self, nixpkgs, nix-tools, flake-utils, ihaskell, lectic, razzle, ... }:
@@ -46,14 +42,12 @@
           packages.default = self.packages.${system}.lite;
 
           packages.heavy = pkgs.callPackage ./neovim {
-            inherit (inputs) codecompanion;
             inherit lectic-nvim razzle-nvim;
             ihaskell = ihaskell910Kernel;
             quint-language-server = quint-lsp;
           };
 
           packages.lite = pkgs.callPackage ./neovim {
-            inherit (inputs) codecompanion;
             inherit lectic-nvim razzle-nvim;
           };
 

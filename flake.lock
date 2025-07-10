@@ -33,22 +33,6 @@
         "type": "github"
       }
     },
-    "codecompanion": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1748467235,
-        "narHash": "sha256-Us+Kr19sJe4GgX5HSRt0xlB4uWovldUolo/4CzgRMXo=",
-        "owner": "olimorris",
-        "repo": "codecompanion.nvim",
-        "rev": "43185768e353065f910dcf5915386404f0e950da",
-        "type": "github"
-      },
-      "original": {
-        "owner": "olimorris",
-        "repo": "codecompanion.nvim",
-        "type": "github"
-      }
-    },
     "ebmc-repo": {
       "flake": false,
       "locked": {
@@ -540,7 +524,6 @@
     },
     "root": {
       "inputs": {
-        "codecompanion": "codecompanion",
         "flake-utils": "flake-utils",
         "ihaskell": "ihaskell",
         "lectic": "lectic",
