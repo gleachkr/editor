@@ -124,6 +124,7 @@ let
       lectic-nvim
       razzle-nvim
       molten-nvim
+      diffview-nvim
     ];
 
     plugins = nixpkgsPlugins ++ [ ];
