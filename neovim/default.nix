@@ -17,6 +17,8 @@
   ihaskell ? null,
   lectic-nvim,
   razzle-nvim,
+  mcphub-nvim,
+  mcphub,
   texlab,
   lib,
 }: 
@@ -123,6 +125,7 @@ let
       telescope-ui-select-nvim
       lectic-nvim
       razzle-nvim
+      mcphub-nvim
       molten-nvim
       diffview-nvim
     ];
@@ -130,6 +133,7 @@ let
     plugins = nixpkgsPlugins ++ [ ];
 
     externalPackages = [
+      mcphub
       ripgrep
       gh
       nil
