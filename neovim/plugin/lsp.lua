@@ -22,6 +22,7 @@ local generic = {
     }
 }
 
+require 'lspconfig'.racket_langserver.setup(generic)
 require 'lspconfig'.bashls.setup(generic)
 require 'lspconfig'.clangd.setup(generic)
 require 'lspconfig'.cssls.setup(generic)

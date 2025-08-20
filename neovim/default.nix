@@ -14,11 +14,8 @@
   lua-language-server,
   yaml-language-server,
   quint-language-server ? null,
-  ihaskell ? null,
   lectic-nvim,
   razzle-nvim,
-  mcphub-nvim,
-  mcphub,
   texlab,
   lib,
 }: 
@@ -125,15 +122,13 @@ let
       telescope-ui-select-nvim
       lectic-nvim
       razzle-nvim
-      mcphub-nvim
-      molten-nvim
+      conjure
       diffview-nvim
     ];
 
     plugins = nixpkgsPlugins ++ [ ];
 
     externalPackages = [
-      mcphub
       ripgrep
       gh
       nil
@@ -174,8 +169,7 @@ let
       '';
       wrapperArgs = lib.escapeShellArgs neovimConfig.wrapperArgs 
       + " --set NVIM_APPNAME nvim-nix"
-      + " --prefix PATH : '${lib.makeBinPath externalPackages}'"
-      + (if ihaskell == null then "" else " --prefix JUPYTER_PATH : '${ihaskell}'");
+      + " --prefix PATH : '${lib.makeBinPath externalPackages}'";
     });
 
     neovimSession = writeShellApplication {
