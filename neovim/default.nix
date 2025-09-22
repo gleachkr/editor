@@ -5,7 +5,6 @@
   writeShellApplication, 
   neovim-unwrapped, 
   neovimUtils, 
-  vimUtils, 
   vimPlugins, 
   ripgrep,
   gh,
@@ -122,7 +121,6 @@ let
       telescope-ui-select-nvim
       lectic-nvim
       razzle-nvim
-      conjure
       diffview-nvim
     ];
 
