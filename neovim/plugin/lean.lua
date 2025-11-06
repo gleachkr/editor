@@ -14,9 +14,6 @@ local on_attach = function(_, bufnr)
 end
 
 require'lean'.setup {
-    lsp = {
-        on_attach = on_attach,
-    },
     abbreviations = {
         enabled = false
     },
@@ -25,3 +22,5 @@ require'lean'.setup {
         on_lines = function(lines) vim.notify(lines) end
     },
 }
+
+vim.lspconfig('leanls', { on_attach = on_attach, })
