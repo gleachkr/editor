@@ -23,4 +23,4 @@ require'lean'.setup {
     },
 }
 
-vim.lspconfig('leanls', { on_attach = on_attach, })
+vim.lsp.config('leanls', { on_attach = on_attach, })
