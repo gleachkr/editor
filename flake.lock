@@ -367,11 +367,11 @@
         "utils": "utils_2"
       },
       "locked": {
-        "lastModified": 1763207419,
-        "narHash": "sha256-Yml7lXUFwOfRten98tSibH+ZIV7IMgXbIH8uH4uhhiw=",
+        "lastModified": 1763827258,
+        "narHash": "sha256-dezCaARl5Nq0B9ffM8hGxkaxdV8jgpsLLmIyAcXeHYo=",
         "owner": "gleachkr",
         "repo": "razzle.nvim",
-        "rev": "bdce849838f3c8d8a7aa8a28d60693d48c49f174",
+        "rev": "f0b458684003b3049c0b27b6d31c8e1ac6ab767b",
         "type": "github"
       },
       "original": {
