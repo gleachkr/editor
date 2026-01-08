@@ -122,6 +122,7 @@ let
       lectic-nvim
       razzle-nvim
       diffview-nvim
+      aerial-nvim
     ];
 
     plugins = nixpkgsPlugins ++ [ ];
