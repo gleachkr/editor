@@ -18,7 +18,8 @@ vim.lsp.enable("pylsp")
 vim.lsp.enable("rust_analyzer")
 vim.lsp.enable("texlab")
 vim.lsp.enable("ts_ls")
-vim.lsp.enable('pyright')
+vim.lsp.enable("pyright")
+
 
 vim.api.nvim_create_autocmd("FileType", {
     callback = function() vim.lsp.start({
