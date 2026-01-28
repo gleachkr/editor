@@ -93,7 +93,6 @@ let
       vim-commentary
       vim-fugitive
       vim-repeat
-      vim-unimpaired
       vim-rhubarb
       # vim-interestingwords
       vim-racket
