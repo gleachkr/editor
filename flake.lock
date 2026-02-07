@@ -139,18 +139,18 @@
     "kani-repo": {
       "flake": false,
       "locked": {
-        "lastModified": 1762416501,
-        "narHash": "sha256-IZ8rfDYkSw33vGDrvsUlRUSt3WUvV/ZOusz9JJWZka8=",
+        "lastModified": 1751568156,
+        "narHash": "sha256-8UyAO9eTwcUtOktSJ9QdYpccgDRefWDTIewjAwvkhdA=",
         "ref": "main",
-        "rev": "b37b90f4081da4e4194b1c8a728c117128d5e06e",
-        "revCount": 2334,
+        "rev": "96f7e59a8c8058f3edbdcc4d52940e376d54ff09",
+        "revCount": 2130,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/model-checking/kani"
       },
       "original": {
         "ref": "main",
-        "rev": "b37b90f4081da4e4194b1c8a728c117128d5e06e",
+        "rev": "96f7e59a8c8058f3edbdcc4d52940e376d54ff09",
         "submodules": true,
         "type": "git",
         "url": "https://github.com/model-checking/kani"
@@ -159,14 +159,14 @@
     "kani-tarball": {
       "flake": false,
       "locked": {
-        "lastModified": 1762420546,
-        "narHash": "sha256-/a+pVGQObCQjP4BVaQXHoO1DlDiXOw8yCjiTkGDcPWA=",
+        "lastModified": 1751573292,
+        "narHash": "sha256-RP38iCbQWoQyAYtq2Nnkm6iFhXtVQ4rbHaKyCFMcIsQ=",
         "type": "tarball",
-        "url": "https://github.com/model-checking/kani/releases/download/kani-0.66.0/kani-0.66.0-x86_64-unknown-linux-gnu.tar.gz"
+        "url": "https://github.com/model-checking/kani/releases/download/kani-0.64.0/kani-0.64.0-x86_64-unknown-linux-gnu.tar.gz"
       },
       "original": {
         "type": "tarball",
-        "url": "https://github.com/model-checking/kani/releases/download/kani-0.66.0/kani-0.66.0-x86_64-unknown-linux-gnu.tar.gz"
+        "url": "https://github.com/model-checking/kani/releases/download/kani-0.64.0/kani-0.64.0-x86_64-unknown-linux-gnu.tar.gz"
       }
     },
     "leanink-repo": {
@@ -193,11 +193,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1770344834,
-        "narHash": "sha256-VeIKDMB//OBXR8AdeVLPuv+vaDrJQAgwfKH+xN+P04Y=",
+        "lastModified": 1768693097,
+        "narHash": "sha256-jSm78OvLMTptBoqFYsDZPbKCo9mptMVbl2L/O8Z4dz0=",
         "owner": "gleachkr",
         "repo": "lectic",
-        "rev": "c9a55dea559fe60f4a1308f5871b691238eb3dd9",
+        "rev": "08d3b9d28f679c0145510114e67ebf2c1fd11602",
         "type": "github"
       },
       "original": {
@@ -240,11 +240,11 @@
         "sbt-derivation": "sbt-derivation"
       },
       "locked": {
-        "lastModified": 1762481271,
-        "narHash": "sha256-iLNwHhpuCHZ9Sd4e+O0qD7og+y29pbhYE3MmOC4hsiI=",
+        "lastModified": 1753893065,
+        "narHash": "sha256-JLFobVIGPOua2SYDzbmMdmJ8bth80e//Q894tJ0cUrA=",
         "owner": "gleachkr",
         "repo": "nix-tools",
-        "rev": "e6f10ee4dc0b4ddbfa2d134b97f6d9015e6b27c3",
+        "rev": "9645cb03cefa30fabc7c9698bba5c708e8396518",
         "type": "github"
       },
       "original": {
@@ -333,11 +333,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1770197578,
-        "narHash": "sha256-AYqlWrX09+HvGs8zM6ebZ1pwUqjkfpnv8mewYwAo+iM=",
+        "lastModified": 1762111121,
+        "narHash": "sha256-4vhDuZ7OZaZmKKrnDpxLZZpGIJvAeMtK6FKLJYUtAdw=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "00c21e4c93d963c50d4c0c89bfa84ed6e0694df2",
+        "rev": "b3d51a0365f6695e7dd5cdf3e180604530ed33b4",
         "type": "github"
       },
       "original": {
@@ -394,11 +394,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1762396738,
-        "narHash": "sha256-BarSecuxtzp1boERdABLkkoxQTi6s/V33lJwUbWLrLY=",
+        "lastModified": 1753843724,
+        "narHash": "sha256-a0Aab7Zst68GqvNAMh9Ejwnp8gawGnruOMtEWZ0HHjM=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "c63598992afd54d215d54f2b764adc0484c2b159",
+        "rev": "01ac47d86311fb030023f1dfc5f6bc368b9c6cee",
         "type": "github"
       },
       "original": {

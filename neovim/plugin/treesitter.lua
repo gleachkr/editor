@@ -1,4 +1,4 @@
-require("nvim-treesitter.config").setup {
+require("nvim-treesitter.configs").setup {
 
     highlight = {
         -- `false` will disable the whole extension

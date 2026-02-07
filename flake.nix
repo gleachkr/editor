@@ -7,7 +7,7 @@
     lectic.url = "github:gleachkr/lectic";
   };
 
-  outputs = { self, nixpkgs, nix-tools, flake-utils, lectic, razzle, ... }:
+  outputs = inputs@{ self, nixpkgs, nix-tools, flake-utils, lectic, razzle, ... }:
     let
       out = system:
         let
