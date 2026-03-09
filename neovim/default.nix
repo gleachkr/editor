@@ -96,7 +96,7 @@ let
       vim-rhubarb
       # vim-interestingwords
       vim-racket
-      colorizer
+      nvim-colorizer-lua
       # vim-syntax-shakespeare
       oceanic-next
       nightfox-nvim
