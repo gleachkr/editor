@@ -14,6 +14,7 @@
   yaml-language-server,
   quint-language-server ? null,
   lectic-nvim,
+  swine-nvim,
   razzle-nvim,
   texlab,
   lib,
@@ -119,6 +120,7 @@ let
       telescope-fzf-native-nvim
       telescope-ui-select-nvim
       lectic-nvim
+      swine-nvim
       razzle-nvim
       diffview-nvim
       aerial-nvim
