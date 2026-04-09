@@ -4,7 +4,6 @@
   symlinkJoin, 
   writeShellApplication, 
   neovim-unwrapped, 
-  neovimUtils, 
   vimPlugins, 
   ripgrep,
   gh,
@@ -144,7 +143,8 @@ let
       # the project.
     ];
 
-    neovimConfig = neovimUtils.makeNeovimConfig { 
+    neovim = wrapNeovimUnstable neovim-unwrapped { 
+
       inherit plugins;
       withPython3 = true;
       withNodeJs = true;
@@ -157,9 +157,6 @@ let
         pyperclip
         ipykernel
       ];
-    };
-
-    neovim = wrapNeovimUnstable neovim-unwrapped (neovimConfig // { 
       luaRcContent = '' 
       vim.loader.enable()
       vim.opt.rtp:prepend('${nvimRtp}/lua')
@@ -167,10 +164,11 @@ let
       vim.opt.rtp:prepend('${nvimRtp}/nvim')
       vim.opt.rtp:prepend('${nvimRtp}/after')
       '';
-      wrapperArgs = lib.escapeShellArgs neovimConfig.wrapperArgs 
-      + " --set NVIM_APPNAME nvim-nix"
-      + " --prefix PATH : '${lib.makeBinPath externalPackages}'";
-    });
+      wrapperArgs = [
+        "--set" "NVIM_APPNAME" "nvim-nix"
+        "--prefix" "PATH" ":" "'${lib.makeBinPath externalPackages}'"
+      ];
+    };
 
     neovimSession = writeShellApplication {
       name = "sesh";
