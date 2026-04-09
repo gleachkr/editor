@@ -54,7 +54,9 @@ vim.cmd.dig("O9", 9320)
 
 vim.filetype.add({
     extension = {
-        qnt = 'quint'
+        qnt = 'quint',
+        auf = 'aufbau',
+        mm0 = 'metamath_zero'
     }
 })
 

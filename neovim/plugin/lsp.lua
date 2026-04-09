@@ -27,16 +27,17 @@ vim.api.nvim_create_autocmd("FileType", {
     callback = function() vim.lsp.start({
         name = 'quint',
         cmd = {'quint-language-server', '--stdio'},
-        root_dir = vim.fs.dirname()
+        root_dir = vim.fs.dirname(nil)
     }) end,
     pattern = "quint"
 })
 
--- require 'coq-lsp'.setup {
---     lsp = {
---         on_attach = on_attach,
---         init_options = {
---             show_notices_as_diagnostics = true,
---         }
---     }
--- }
+
+vim.api.nvim_create_autocmd("FileType", {
+    callback = function() vim.lsp.start({
+        name = 'auf',
+        cmd = {'abc', 'lsp'},
+        root_dir = vim.fs.dirname(nil)
+    }) end,
+    pattern = {"aufbau", "metamath_zero"}
+})
