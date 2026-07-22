@@ -7,8 +7,12 @@
   vimPlugins, 
   ripgrep,
   gh,
+  gitMinimal,
   nil,
-  nodePackages,
+  bash-language-server,
+  typescript-language-server,
+  vscode-langservers-extracted,
+  vim-language-server,
   lua-language-server,
   yaml-language-server,
   quint-language-server ? null,
@@ -47,17 +51,10 @@ let
     nixpkgsPlugins = with vimPlugins; [
       nvim-treesitter.withAllGrammars
       luasnip
-      nvim-cmp
-      cmp_luasnip
-      cmp-nvim-lsp
-      lspkind-nvim
-      cmp-buffer
-      cmp-path
-      cmp-nvim-lua
-      cmp-cmdline
-      cmp-git
-      cmp-latex-symbols
-      cmp-spell
+      blink-cmp
+      blink-cmp-git
+      blink-cmp-latex
+      blink-cmp-spell
       lean-nvim
       nvim-lspconfig
       plenary-nvim
@@ -130,15 +127,16 @@ let
     externalPackages = [
       ripgrep
       gh
+      gitMinimal
       nil
       lua-language-server
       texlab
       yaml-language-server
       quint-language-server
-      nodePackages.bash-language-server
-      nodePackages.typescript-language-server
-      nodePackages.vscode-langservers-extracted
-      nodePackages.vim-language-server
+      bash-language-server
+      typescript-language-server
+      vscode-langservers-extracted
+      vim-language-server
       # could add more - basically want anything that's not likely to depend on
       # the project.
     ];

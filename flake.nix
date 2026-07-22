@@ -12,7 +12,16 @@
     let
       out = system:
         let
-          pkgs = nixpkgs.legacyPackages.${system};
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfreePredicate = pkg:
+              builtins.elem (nixpkgs.lib.getName pkg) [
+                "blink-cmp-spell"
+                "rainbow_parentheses.vim"
+                "vim-colorschemes"
+                "vim-pug"
+              ];
+          };
           lectic-nvim = lectic.packages.${system}.lectic-nvim;
           swine-nvim = swine.packages.${system}.swine-nvim;
           razzle-nvim = razzle.packages.${system}.default;
