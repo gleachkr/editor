@@ -1,0 +1,1 @@
+require("swine").setup({})
