@@ -147,8 +147,12 @@ blink.setup({
     },
     cmdline = {
         sources = function()
-            if vim.fn.getcmdtype() == "/" then
+            local cmd_type = vim.fn.getcmdtype()
+            if cmd_type == "/" or cmd_type == "?" then
                 return { "buffer" }
+            end
+            if cmd_type == ":" or cmd_type == "@" then
+                return { "cmdline" }
             end
             return {}
         end,
