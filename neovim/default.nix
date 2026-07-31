@@ -18,6 +18,7 @@
   quint-language-server ? null,
   lectic-nvim,
   swine-nvim,
+  nippy-nvim,
   razzle-nvim,
   texlab,
   lib,
@@ -117,6 +118,7 @@ let
       telescope-ui-select-nvim
       lectic-nvim
       swine-nvim
+      nippy-nvim
       razzle-nvim
       diffview-nvim
       aerial-nvim
