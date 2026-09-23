@@ -6,6 +6,7 @@ if vim.fn.win_gettype() ~= "popup" then
     vim.opt_local.formatoptions='tanqwl'
     vim.opt_local.formatlistpat = [[^\s*\([-*+∙∘•]\|\d\+\.\)\s\+]]
     vim.opt_local.so=10
-    vim.opt_local.lsp=5
     vim.cmd[[silent compiler pandoc]]
 end
+
+vim.opt_local.linebreak = true

@@ -1,13 +1,10 @@
 vim.g.maplocalleader = ','
-vim.keymap.set('n', '<LocalLeader>e', vim.diagnostic.open_float, { noremap = true, silent = true })
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, silent = true })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, silent = true })
-vim.keymap.set('n', '<LocalLeader>q', vim.diagnostic.setloclist, { noremap = true, silent = true })
+vim.keymap.set('n', '<LocalLeader>e', vim.diagnostic.open_float, { silent = true })
+vim.keymap.set('n', '<LocalLeader>q', vim.diagnostic.setloclist, { silent = true })
 vim.keymap.set('i', 'jk', '<esc>')
-vim.keymap.set("n", "U", vim.cmd.redo, { noremap = true, silent = true })
+vim.keymap.set("n", "U", vim.cmd.redo, { silent = true })
 vim.keymap.set("n", "Q", "@q")
-vim.keymap.set("n", "gx", "<cmd>terminal xdg-open '<cWORD>'<cr>", { noremap = true, silent = true })
-vim.keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>", { noremap = true, silent = true })
+vim.keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>", { silent = true })
 
 vim.opt.undofile = true
 vim.opt.virtualedit = 'block'
@@ -76,15 +73,9 @@ vim.api.nvim_create_autocmd("BufWriteCmd", {
     end
 })
 
-vim.api.nvim_create_user_command('Browse',
-    function(opts)
-        vim.fn.system { 'xdg-open', opts.fargs[1] }
-    end,
-    { nargs = 1 })
-
 vim.api.nvim_create_user_command("Async",
     function(opts)
-        local uv = vim.loop
+        local uv = vim.uv
         local stdout = uv.new_pipe(true)
         local stderr = uv.new_pipe(true)
 

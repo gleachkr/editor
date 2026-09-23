@@ -15,6 +15,7 @@
   vim-language-server,
   lua-language-server,
   yaml-language-server,
+  pyright,
   quint-language-server ? null,
   lectic-nvim,
   swine-nvim,
@@ -63,18 +64,12 @@ let
       nvim-web-devicons
       zen-mode-nvim
       undotree
-      # bg-nvim
-      # guile-vim
       vimtex
       solarized-nvim
-      # vim-lucius
       vim-hybrid
       Recover-vim
       mediawiki-vim
       vim-colorschemes
-      # colour-schemes
-      # matchit
-      # anderson-vim
       zenburn
       gv-vim
       limelight-vim
@@ -85,17 +80,12 @@ let
       vim-sexp
       vim-sexp-mappings-for-regular-people
       vim-pug
-      # sweater
       vim-javascript
-      # vim-colors-pencil
-      vim-commentary
       vim-fugitive
       vim-repeat
       vim-rhubarb
-      # vim-interestingwords
       vim-racket
       nvim-colorizer-lua
-      # vim-syntax-shakespeare
       oceanic-next
       nightfox-nvim
       vim-jsx-pretty
@@ -106,7 +96,6 @@ let
       fidget-nvim
       nvim-lightbulb
       lazydev-nvim
-      # coq-lsp-nvim
       friendly-snippets
       vim-obsession
       octo-nvim
@@ -134,13 +123,15 @@ let
       lua-language-server
       texlab
       yaml-language-server
+      pyright
       quint-language-server
       bash-language-server
       typescript-language-server
       vscode-langservers-extracted
       vim-language-server
       # could add more - basically want anything that's not likely to depend on
-      # the project.
+      # the project. (ruff is deliberately absent: projects often pin its
+      # version for formatting, so we pick it up from PATH instead.)
     ];
 
     neovim = wrapNeovimUnstable neovim-unwrapped { 
@@ -184,9 +175,9 @@ let
 
         if [ "$CMD" == NEW-SESSION ]; then
             SESSION_PATH="$HOME/.cache/nvim-nix/$(gum input --placeholder "session name?").pipe"
-            if [ -f "$SESSION_PATH" ]; then echo "hold your horses!"; exit; fi
+            if [ -e "$SESSION_PATH" ]; then echo "hold your horses!"; exit; fi
             nohup nvim --headless --listen "$SESSION_PATH" > /dev/null &
-            sleep 1 #kludge to allow nvim time to start up
+            until [ -S "$SESSION_PATH" ]; do sleep 0.05; done
             nvim --server "$SESSION_PATH" --remote-ui
         else
             nvim --server "$CMD" --remote-ui
